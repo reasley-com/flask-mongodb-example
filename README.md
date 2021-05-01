@@ -28,9 +28,7 @@ We are trying to provide a variety of services.
 ㅤ
 
 ## Modules
-
-Dillinger is currently extended with the following plugins.
-Instructions on how to use them in your own application are linked below.
+Flask-based web module
 
 
 | Module | README |
