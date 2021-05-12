@@ -1,8 +1,101 @@
 <html>
+  <head>
+    {%with messages = get_flashed_messages()%}
+    {%if messages %}
+      <script type="text/javascript">
+        alert("{{messages[-1]}}");
+      </script>
+      {%endif%}
+    {%endwith%}
+
+    <script>
+      function PageMove(target, id){
+        location.href='/'+ target +'/' + id;
+      }
+
+      function form_change(frm) { 
+        frm.action='/upload'; 
+        frm.submit(); 
+        return true; 
+      } 
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+      body{
+        padding: 120px;
+      }
+      tr{
+        cursor: pointer;
+      }
+      tr:hover{
+        background: #eee;
+      }
+    </style>
+  </head>
   <body>
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-      <input type="file" name="file" />
-      <input type = "submit"/>
+
+    <h2>File Upload</h2>
+    &nbsp
+    <form action="/gridfs_upload" method="POST" enctype="multipart/form-data">
+      <div class="input-group mb-3">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputGroupFile02" name="file">
+          <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+        </div>
+        <div class="input-group-append">
+          <input class="input-group-text" type="submit" value="gridfs_upload"/>
+          <input class="input-group-text" type="submit" value="upload", onclick="return form_change(this.form);"/>
+        </div>
+      </div>
     </form>
+    &nbsp
+    <h4>GIRDFS List</h4>
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">숫자</th>
+          <th scope="col">아이디</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        {% for db_single in grid_list %}
+          {% set object_id = db_single['_id'] %}
+          <tr onclick="PageMove('gridfs_download', '{{object_id}}')">
+            <td>{{loop.index}}</td>
+            <td>{{object_id}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+
+    &nbsp
+
+    <h4>Normal List</h4>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">숫자</th>
+          <th scope="col">아이디</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        {% for db_single in normal_list %}
+          {% set object_id = db_single['_id'] %}
+          <tr onclick="PageMove('download', '{{object_id}}')">
+            <td scope="row">{{loop.index}}</td>
+            <td>{{object_id}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </body>
 </html>
+
+
+
+<!-- reasley -->
