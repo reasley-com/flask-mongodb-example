@@ -34,17 +34,15 @@ Flask-based web module
 | Module | README |
 | ------ | ------ |
 | Flask | https://pypi.org/project/Flask/ |
-| pymongo |  |
+| pymongo | https://pypi.org/project/pymongo/ |
 | Girdfs |  |
 | bson |  |
 | base64 |  |
-ㅤ
-ㅤ
-ㅤ
+
 
 
 ## Page appearance
-- Normal Upload
 - Girdfs Upload
-![image](https://user-images.githubusercontent.com/33018600/118010264-d3c92b80-b389-11eb-8dfe-1b0a44d0ff1c.png)
+- Normal Upload
+![image](https://user-images.githubusercontent.com/33018600/118343775-d2ecf100-b565-11eb-8e55-517f91535528.png)
 
