@@ -5,7 +5,7 @@
 ㅤ
 
 ## Features
-- Just File Upload Your Local Database
+- Just File Upload and Download Your Local Database
 - That is. Done.
 
 
