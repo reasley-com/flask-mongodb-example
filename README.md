@@ -29,9 +29,9 @@ We are trying to provide a variety of services.
 
 ```
 📁Flask
-├── 📁templates
-│   └── 📄index.html
-└── 📄app.py
+├── 📄app.py
+└── 📁templates
+    └── 📄index.html
 ```
 
 ㅤ
