@@ -25,6 +25,16 @@ We are trying to provide a variety of services.
 ㅤ
 ㅤ
 ㅤ
+## Directory Structure
+
+```
+📁Flask
+├── 📁templates
+│   └── 📄index.html
+└── 📄app.py
+```
+
+ㅤ
 ㅤ
 
 ## Modules
