@@ -11,17 +11,13 @@
 
 ![image](https://user-images.githubusercontent.com/33018600/116790473-49faa200-aaef-11eb-8234-32c55c909e5e.png)
 
+## 🌊 Developer's other site
+There is a lot of information about Flutter on blogs and on GitHub.    
+We ask for your interest.
 
-## WHO AM I
-O4a Research Engineer and Developers who love cats and whales.
-We are trying to provide a variety of services.
-
-| Platform | README |
-| ------ | ------ |
-| Blog | https://reasley.com |
-| GitHub | https://github.com/reasley-com |
-| Service | https://calcs.kr/ |
-
+* [Reasley Blog](https://reasley.com)
+* [Reasley GitHub](https://github.com/reasley-com)
+* [Developer Service](https://calcs.kr)
 ㅤ
 ㅤ
 ㅤ
