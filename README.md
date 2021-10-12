@@ -48,7 +48,7 @@ Flask-based web module
 
 
 ## 🌊 Developer's other site
-There is a lot of information about Flutter on blogs and on GitHub.    
+There is a lot of information about Flask on blogs and on GitHub.    
 We ask for your interest.
 
 * [Reasley Blog](https://reasley.com)
